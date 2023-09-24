@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.sample.mapper.SampleMapper">
+
+	<insert id="insertSampleTable" >
+	    INSERT INTO sampletable (PK_SAMPLE)
+	    VALUES (nextval('PK_SEQ'))
+	</insert>
+	
+	<select id="selectSampleTable" resultType="String">
+		SELECT MAX(CAST(PK_SAMPLE AS INTEGER)) FROM sampletable
+	</select>
+	
+</mapper>
